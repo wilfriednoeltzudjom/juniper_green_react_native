@@ -33,6 +33,10 @@ const Form = ({ navigation }) => {
       dispatch(gameActions.playHuman({ navigation, value: numericValue }));
   };
 
+  const quitGame = () => {
+    dispatch(gameActions.quitGame({ navigation }));
+  };
+
   return (
     <View style={styles.form}>
       {isHumanTurn && (
@@ -55,7 +59,7 @@ const Form = ({ navigation }) => {
         <Button onPress={validValue} style={{ marginTop: 16 }}>
           <Text.Bold>Valider</Text.Bold>
         </Button>
-        <Button color="secondary" onPress={() => {}} style={{ marginTop: 16 }}>
+        <Button color="secondary" onPress={quitGame} style={{ marginTop: 16 }}>
           <Text.Bold>Quitter</Text.Bold>
         </Button>
       </Row>

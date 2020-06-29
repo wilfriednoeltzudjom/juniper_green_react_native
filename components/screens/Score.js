@@ -24,7 +24,7 @@ const Score = ({ navigation }) => {
 
   const [choicesCount, setChoicesCount] = useState(0);
   useEffect(() => {
-    if (choices && choices.length > 0) setChoicesCount(choices.length - 1);
+    if (choices && choices.length > 0) setChoicesCount(choices.length);
   }, [choices]);
 
   return (
